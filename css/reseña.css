@@ -1,0 +1,28 @@
+ :root {
+            --sky-blue: #1E88E5;
+            --sun-yellow: #FFAB00;
+            --nature-green: #43A047;
+        }
+        .service-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1445116572660-236099ec97a0') center/cover;
+            height: 250px;
+        }
+        .rating-star {
+            color: #ddd;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .rating-star.active, 
+        .rating-star:hover {
+            color: var(--sun-yellow);
+        }
+        textarea {
+            min-height: 150px;
+            border: 2px solid #eee !important;
+        }
+        textarea:focus {
+            border-color: var(--sky-blue) !important;
+            box-shadow: 0 0 0 0.25rem rgba(30, 136, 229, 0.25);
+        }

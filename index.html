@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Login</title>
+ 
+</head>
+<body class="body">
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="book-container row w-100">
+      <!-- Lado izquierdo: Imagen o Información de la Compañía -->
+      <div class="book-page book-left col-md-6 d-flex flex-column justify-content-center align-items-center">
+        <div class="company-info text-center">
+          <h2>Service Econection Colombia</h2>
+          <p>Inicia sesión</p>
+          <img src="Images/logoE.png" alt="Compañía" class="company-image" style="width: 200px;">
+        </div>
+      </div>
+      <!-- Lado derecho: Formulario de Login -->
+      <div class="book-page book-right col-md-6 d-flex flex-column justify-content-center align-items-center">
+        <div class="login-form w-100">
+          <h1 class="text-center"><i class="bi bi-person-circle"></i></h1>
+          <hr>
+          <form>
+            <div class="mb-3">
+              <label for="InputUser" class="form-label">Nombre de usuario</label>
+              <input type="text" class="form-control" id="InputUser">
+            </div>
+            <div class="mb-3">
+              <label for="InputPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="InputPassword">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 btnSubmit">Iniciar</button>
+          </form>
+          <div class="text-center mt-3">
+            <small><a href="Pages/Forgot.html">¿Olvidaste tu contraseña?</a></small>
+            <span>|</span>
+            <small><a href="Pages/Account.html">¿No tienes cuenta?</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="footer mt-auto py-4 bg-light">
+    <div class="container text-center">
+      <p class="text-muted text-black">© 2024 PharmaControl. Todos los derechos reservados.</P> 
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="#" class="text-black">|Política de Privacidad</a></li>
+          <li class="list-inline-item"><a href="#" class="text-black">|Términos y Condiciones</a></li>
+          <li class="list-inline-item"><a href="#" class="text-black">|Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="JavaScripts/Index.js"></script>
+  
+  <script>
+
+      document.querySelector(".btnSubmit").addEventListener("click", function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+
+      let username = document.getElementById("InputUser").value.trim();
+      let password = document.getElementById("InputPassword").value.trim();
+
+      if (username === "cliente" && password === "123") {
+          window.location.href = "Pages/homeclienteApp.html";
+      } else if (username === "admin" && password === "123") {
+          window.location.href = "Pages/adminDashboard.html";
+      } else {
+          alert("Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.");
+      }
+  });
+  </script> 
+</body>
+</html>
+7 
